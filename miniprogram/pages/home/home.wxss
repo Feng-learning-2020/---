@@ -1,0 +1,276 @@
+@import "./home.skeleton.wxss";
+
+page{
+  height: 100%;
+}
+.home{
+  height: 100%;
+}
+.home-bg-box{
+  height: 272rpx;
+}
+.home-bg{
+  width: 100%;
+  display: block;
+}
+.name-logo-box{
+  padding: 16rpx;
+  background-color: rgba(242, 242, 242, 0.6);
+  position: relative;
+  top: -40rpx;
+  overflow: hidden;
+}
+.name-box{
+  max-width: 78%;
+  color: #444;
+  font-size: 34rpx;
+  font-weight: bold;
+}
+.name-des{
+  color: #999;
+  height: 100rpx;
+  font-size: 24rpx;
+  font-weight: normal;
+  overflow: auto;
+}
+.logo-box{
+  width: 140rpx;
+  height: 140rpx ;
+  background-color: #ff0033;
+}
+.logo{
+  height: 142rpx  !important;
+}
+.food-classify{
+  height: calc(100% - 444rpx);
+  background-color: #fff;
+  overflow: hidden;
+}
+.type-list{
+  width: 160rpx;
+  height: 100%;
+  background-color: #f2f2f2;
+  overflow-y: auto;
+}
+.active{
+  color: #fff !important;
+  background-color: #ff0033;
+}
+.list-item{
+  color: #444;
+  font-size: 26rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+}
+.menu-content{
+  width: calc(100% - 160rpx);
+  height: 100%;
+  overflow-y: auto;
+}
+
+.shop-cart-box{
+  position: fixed;
+  bottom: 120rpx;
+  right: 12rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-color: #eee;
+  overflow: hidden;
+  z-index: 10;
+}
+.shop-cart-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 60rpx;
+  height: 60rpx;
+  margin: auto;
+}
+.pro-count{
+  position: absolute;
+  top: -14rpx;
+  right: -6rpx;
+  width: 32rpx;
+  height: 32rpx;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 32rpx;
+  background-color: #fff;
+  color: #ff0033;
+  font-size: 20rpx;
+}
+.shop-cart-img>image{
+  width: 100%;
+  height: 60rpx !important;
+  display: block;
+}
+.shop-cart-box.active{
+  background-color: rgb(224, 192, 198);
+}
+.pro-count.animate{
+  animation: doudong .5s linear 0s 1 normal running;
+}
+
+/* 购物车详情 */
+.shopcart-detail-box{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 11;
+  background-color: rgba(0,0,0,.4);
+}
+.shopcart-detail{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -250rpx;
+  margin-top: -350rpx;
+  width: 500rpx;
+  height: 700rpx;
+  background-color: #fff;
+  border-top-left-radius: 16rpx;
+  border-top-right-radius: 16rpx;
+  overflow: hidden;
+}
+.edit{
+  position: absolute;
+  left: 24rpx;
+  font-size: 28rpx;
+  color: #777;
+}
+.shopcart-title{
+  width: 100%;
+  height: 80rpx;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 80rpx;
+  background-color: #f2f2f2;
+}
+.shopcart-exit{
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  width: 34rpx;
+  height: 34rpx;
+}
+.shopcart-exit>image{
+  height: 34rpx;
+}
+.shopcart-pros{
+  height: 75%;
+  overflow-y: auto;
+}
+/* 单个商品 */
+.shopcart-pro{
+  position: relative;
+  overflow: hidden;
+  transition: all .3s;
+}
+.shopcart-delete{
+  width: 38rpx;
+  height: 38rpx;
+  border-radius: 50%;
+  border: 1rpx solid #ff0033;
+  margin-left: 16rpx;
+  margin-top: 62rpx;
+}
+.shopcart-delete>view{
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  background-color: #ff0033;
+  border: #fff;
+  margin: 4rpx 4rpx;
+}
+.shopcart-img-box{
+  width: 140rpx;
+  height: 140rpx;
+  background-color: #f2f2f2;
+  margin: 12rpx 0 12rpx 24rpx;
+}
+.shopcart-img{
+  height: 140rpx !important;
+}
+.shopcart-content{
+  height: 140rpx;
+  margin: 12rpx 0 12rpx 16rpx;
+  transition: all .3s;
+}
+.content-name{
+  color: #444;
+}
+.content-rule{
+  color: #999;
+  font-size: 26rpx;
+  margin-top: 8rpx;
+}
+.content-pri-num{
+  overflow: hidden;
+  height: 48rpx;
+  line-height: 48rpx;
+  margin-top: 8rpx;
+}
+.content-pri{
+  color: #ff0033;
+  font-size: 28rpx;
+}
+.content-num{
+  color: #999;
+  font-size: 24rpx;
+}
+.nothing{
+  width: 100%;
+  height: 526rpx;
+  background-color: #eee;
+  color: #ff0033;
+  text-align: center;
+  line-height: 200rpx;
+}
+
+.submit-btn{
+  position: absolute;
+  bottom: 24rpx;
+  left: 50rpx;
+  width: 400rpx;
+  height: 70rpx;
+  color: #fff;
+  background-color: #ff0033;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 70rpx;
+}
+
+
+@keyframes doudong {
+
+  0%{
+    top: -12rpx;
+  }
+
+  20% {
+    top: -20rpx;
+  }
+
+  40% {
+    top: -4rpx;
+  }
+
+  60% {
+    top: -18rpx;
+  }
+
+  80% {
+    top: -6rpx;
+  }
+
+  100% {
+    top: -12rpx;
+  }
+
+}

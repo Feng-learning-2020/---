@@ -1,0 +1,100 @@
+<!--
+此文件为开发者工具生成，生成时间: 2020/12/1 上午11:46:53 
+使用方法：
+在 E:\粤嵌\微信小程序\tel\miniprogram\pages\home\home.wxml 引入模板
+
+```
+<import src="home.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 E:\粤嵌\微信小程序\tel\miniprogram\pages\home\home.wxss 中引入样式
+```
+@import "./home.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="home">
+      <view class="home-bg-box">
+        <image class="home-bg sk-image" mode="widthFix" style="height: 135.938px;"></image>
+      </view>
+      <view class="name-logo-box">
+        <view class="fl name-box sk-transparent sk-text-14-2857-663 sk-text">十亩之间</view>
+        <view class="fr logo-box">
+          <image class="logo auto-img sk-image" mode="widthFix" style="height: 70.2354px;"></image>
+        </view>
+      </view>
+      <view class="food-classify">
+        <view class="fl type-list">
+          <view class="list-item"></view>
+          <view class="list-item"></view>
+          <view class="list-item"></view>
+          <view class="list-item"></view>
+        </view>
+        <view class="fl menu-content">
+          <view is="components/product/product">
+            <view class="product--product product--clearfix sk-pseudo sk-pseudo-circle">
+              <view class="product--fl product--pro-img-box">
+                <image class="product--auto-img sk-image" mode="widthFix" style="height: 90px;"></image>
+              </view>
+              <view class="product--fl product--pro-info">
+                <view class="product--pro-name sk-transparent sk-text-14-2857-381 sk-text">牛腩陈村粉</view>
+                <view class="product--pro-sell sk-transparent sk-text-14-2857-894 sk-text">月销938</view>
+                <view class="product--pro-good-comment sk-transparent sk-text-14-2857-381 sk-text">好评率97%</view>
+                <view class="product--price-rule-choose product--clearfix sk-pseudo sk-pseudo-circle">
+                  <view class="product--fl product--pro-price sk-transparent sk-text-14-2857-140 sk-text">￥15</view>
+                  <view class="product--fr product--pro-rule sk-transparent sk-text-26-0000-250 sk-text" style="background-position-x: 50%;">选规格</view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view is="components/product/product">
+            <view class="product--product product--clearfix sk-pseudo sk-pseudo-circle">
+              <view class="product--fl product--pro-img-box">
+                <image class="product--auto-img sk-image" mode="widthFix" style="height: 90px;"></image>
+              </view>
+              <view class="product--fl product--pro-info">
+                <view class="product--pro-name sk-transparent sk-text-14-2857-670 sk-text">牛腩陈村粉</view>
+                <view class="product--pro-sell sk-transparent sk-text-14-2857-991 sk-text">月销938</view>
+                <view class="product--pro-good-comment sk-transparent sk-text-14-2857-671 sk-text">好评率97%</view>
+                <view class="product--price-rule-choose product--clearfix sk-pseudo sk-pseudo-circle">
+                  <view class="product--fl product--pro-price sk-transparent sk-text-14-2857-911 sk-text">￥15</view>
+                  <view class="product--fr product--pro-rule sk-transparent sk-text-26-0000-274 sk-text" style="background-position-x: 50%;">选规格</view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view is="components/product/product">
+            <view class="product--product product--clearfix sk-pseudo sk-pseudo-circle">
+              <view class="product--fl product--pro-img-box">
+                <image class="product--auto-img sk-image" mode="widthFix" style="height: 90px;"></image>
+              </view>
+              <view class="product--fl product--pro-info">
+                <view class="product--pro-name sk-transparent sk-text-14-2857-795 sk-text">牛腩陈村粉</view>
+                <view class="product--pro-sell sk-transparent sk-text-14-2857-617 sk-text">月销938</view>
+                <view class="product--pro-good-comment sk-transparent sk-text-14-2857-152 sk-text">好评率97%</view>
+                <view class="product--price-rule-choose product--clearfix sk-pseudo sk-pseudo-circle">
+                  <view class="product--fl product--pro-price sk-transparent sk-text-14-2857-213 sk-text">￥15</view>
+                  <view class="product--fr product--pro-rule sk-transparent sk-text-26-0000-383 sk-text" style="background-position-x: 50%;">选规格</view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view is="components/product/product">
+            <view class="product--product product--clearfix sk-pseudo sk-pseudo-circle">
+              <view class="product--fl product--pro-img-box">
+                <image class="product--auto-img sk-image" mode="widthFix" style="height: 90px;"></image>
+              </view>
+              <view class="product--fl product--pro-info">
+                <view class="product--pro-name sk-transparent sk-text-14-2857-729 sk-text">牛腩陈村粉</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,52 @@
+<import src="order.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{loading}}" />
+
+<view class="order" wx:else>
+  <!-- 一个订单的信息 -->
+  <view class="order-item" wx:for="{{orderData}}" wx:key="index" wx:if="{{orderData}}">
+
+    <!-- 订单信息 -->
+    <view class="pay-information-box">
+      <!-- 标题 -->
+      <view class="information-title">
+        <view class="fl information-num">{{item.orderNo}}</view>
+        <view class="fr information-btn" data-id="{{item._id}}" bindtap="{{item.status == 0 ? 'finishOrder' : ''}}">{{item.status == 0 ? '确认收货' : '已收货'}}</view>
+      </view>
+      <!-- 地址信息 -->
+      <view class="address-information">
+        
+        <view>收货人: {{item.address.receiver}}  <text class="tel">电话:{{item.address.tel}}</text></view>
+        <view>地址: {{item.address.detailAddress}}</view>
+      </view>
+
+      <!-- 单个商品信息 -->
+      <view class="pay-information" wx:for="{{item.products}}" wx:for-item="v" wx:for-index="i" wx:key="i">
+        <!-- 商品图片 -->
+        <view class="fl information-img-box">
+          <image class="information-img" src="{{v.product.img}}"></image>
+        </view>
+        <!-- 商品规格信息 -->
+        <view class="fl information-content">
+          <view class="information-name"> {{v.product.name}} </view>
+          <view class="information-rule"> {{v.rule}} </view>
+          <view class="information-pri-num">
+            <view class="fl information-pri">￥ {{v.product.price}} </view>
+            <view class="fr information-num">x {{v.count}} </view>
+          </view>
+        </view>
+      </view> 
+
+    </view>
+    <!-- 订单底部总价格 -->
+    <view class="count-total-box">
+      <view class="time">{{item.date}}</view>
+      <view class="count-total">
+        <view class="fl count-box">共计 {{item.productCount}} 件商品</view>
+        <view class="fr total-box">合计 ￥ {{item.total}} </view>
+      </view>
+    </view>
+
+  </view>
+  <view wx:if="{{orderData.length == 0}}" class="nothing">客官,您还没有下过单,赶紧去下单吧</view>
+
+</view>

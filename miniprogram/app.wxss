@@ -1,0 +1,18 @@
+page{
+  background-color: #f2f2f2;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.auto-img{
+  width: 100%;
+  display: block;
+}
+clear-float::after{
+  content: "";
+  display: block;
+  clear: both;
+}

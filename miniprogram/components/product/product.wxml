@@ -1,0 +1,58 @@
+<view class="product clearfix">
+  <view class="fl pro-img-box">
+    <image class="auto-img" mode="widthFix" src="{{productData.img}}"></image>
+  </view>
+  <view class="fl pro-info">
+    <view class="pro-name">{{productData.name}}</view>
+    <view class="pro-sell">月销938</view>
+    <view class="pro-good-comment">好评率97%</view>
+    <view class="price-rule-choose clearfix">
+      <view class="fl pro-price">￥{{productData.price}}</view>
+      <view class="fr pro-rule" bindtap="toggleRuleBox" data-hidden='0' data-top='0'>选规格</view>
+    </view>
+  </view>
+
+  <!-- 弹出层-选择规格 -->
+  <view class="transparent-box" hidden="{{isHidden}}" style="top: {{top}}" bindtap="toggleRuleBox" data-hidden="1" data-top="100%">
+    <view class="rule-box" catchtap="toggleRuleBox" data-rules="1">
+      <!-- 退出按钮  -->
+      <view class="exit" catchtap="toggleRuleBox" data-hidden="1" data-top="100%">
+        <image class="exit-img" mode="widthFix" src="../../images/close.png"></image>
+      </view>
+
+      <view class="p-msc clearfix">
+        <view class="fl pro-img-box">
+          <image class="auto-img" mode="widthFix"
+            src="{{productData.img}}" mode="widthFix"></image>
+        </view>
+        <view class="fl p-info">
+          <view class="p-name">{{productData.name}}</view>
+          <view class="p-rules">已选择：{{rules}}</view>
+          <view class="p-price">￥{{productData.price}}</view>
+        </view>
+      </view>
+
+      <view class="rule-choose">
+
+        <view class="count-box clearfix">
+          <view class="fl text">数量</view>
+          <view class="fr count-choose-box">
+            <view class="fl reduce" catchtap="changeCount" data-count="-1">-</view>
+            <view class="fl num">{{currentProduct.count}}</view>
+            <view class="fl add" catchtap="changeCount" data-count="1">+</view>
+          </view>
+        </view>
+
+        <view class="rules-box" wx:for="{{productData.rules}}" wx:key="index">
+          <view class="rule-title">{{item.title}}</view>
+          <view class="rules clearfix">
+            <view class="fl {{item.currentIndex == i ? 'rule-active' : ''}}" wx:for="{{item.rule}}" wx:for-item="v" wx:for-index="i" wx:key="i" data-index="{{i}}" data-current-index="{{item.currentIndex}}" data-rules-index="{{index}}" catchtap="selectRule">{{v}}</view>
+          </view>
+        </view>
+
+        <view wx:if="{{isAuth}}" class="submit-button" catchtap="addShopCart">加入购物车</view>
+        <button wx:else class="auth-btn" open-type="getUserInfo" bindgetuserinfo="getUserAuthInfo">加入购物车</button>
+      </view>
+    </view>
+  </view>
+</view>

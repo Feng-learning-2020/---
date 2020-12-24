@@ -1,0 +1,59 @@
+<!--
+此文件为开发者工具生成，生成时间: 2020/12/4 下午3:27:43 
+使用方法：
+在 E:\粤嵌\微信小程序\tel\miniprogram\pages\address\address.wxml 引入模板
+
+```
+<import src="address.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 E:\粤嵌\微信小程序\tel\miniprogram\pages\address\address.wxss 中引入样式
+```
+@import "./address.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="address">
+      <view class="address-content-box">
+        <view class="name-tel-default-box">
+          <view class="fl name sk-transparent sk-text-23-3333-692 sk-text">帝释天</view>
+          <view class="fl tel sk-transparent sk-text-26-6667-904 sk-text">13566668888</view>
+          <view class="fl default sk-transparent sk-text-18-7500-336 sk-text" style="background-position-x: 50%;">默认</view>
+        </view>
+        <view class="address-content sk-transparent sk-text-14-2857-831 sk-text">天界南天门右侧保安处快递柜10000柜</view>
+        <view class="address-edit">
+          <image class="auto-img sk-image"></image>
+        </view>
+      </view>
+      <view class="address-content-box">
+        <view class="name-tel-default-box">
+          <view class="fl name sk-transparent sk-text-23-3333-626 sk-text">帝释天</view>
+          <view class="fl tel sk-transparent sk-text-26-6667-305 sk-text">13566668888</view>
+          <view class="fl default sk-transparent sk-text-18-7500-393 sk-text" style="background-position-x: 50%;">默认</view>
+        </view>
+        <view class="address-content sk-transparent sk-text-14-2857-940 sk-text">天界南天门右侧保安处快递柜10000柜</view>
+        <view class="address-edit">
+          <image class="auto-img sk-image"></image>
+        </view>
+      </view>
+      <view class="address-content-box">
+        <view class="name-tel-default-box">
+          <view class="fl name sk-transparent sk-text-23-3333-16 sk-text">帝释天</view>
+          <view class="fl tel sk-transparent sk-text-26-6667-583 sk-text">13566668888</view>
+          <view class="fl default sk-transparent sk-text-18-7500-985 sk-text" style="background-position-x: 50%;">默认</view>
+        </view>
+        <view class="address-content sk-transparent sk-text-14-2857-538 sk-text">天界南天门右侧保安处快递柜10000柜</view>
+        <view class="address-edit">
+          <image class="auto-img sk-image"></image>
+        </view>
+      </view>
+      <view class="add-btn-box">
+        <view class="add-btn sk-transparent sk-text-31-5789-712 sk-text" style="background-position-x: 50%;">新增地址</view>
+      </view>
+    </view>
+  </view>
+</template>

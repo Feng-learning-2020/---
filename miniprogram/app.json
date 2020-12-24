@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/my/my",
+    "pages/order/order",
+    "pages/address/address",
+    "pages/edit_address/edit_address",
+    "pages/pay/pay"
+  ],
+  "window": {
+    "backgroundColor": "#ff0033",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ff0033",
+    "navigationBarTitleText": "Ta饿了",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "tabBar": {
+    "color": "#555555",
+    "selectedColor": "#ff0033",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "./images/home.png",
+        "selectedIconPath": "./images/home-active.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "./images/order.png",
+        "selectedIconPath": "./images/order-active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "./images/my.png",
+        "selectedIconPath": "./images/my-active.png"
+      }
+    ]
+  }
+}

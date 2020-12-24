@@ -1,0 +1,26 @@
+<view class="my">
+
+  <view class="my-img-nickname">
+
+    <view class="my-information" wx:if="{{isAuth}}">
+      <view class="my-img">
+        <image class="auto-img myimg" mode="widthFix" src="{{userInfo.img}}"></image>
+      </view>
+      <view class="my-nickname">{{userInfo.nickname}}</view>
+    </view>
+    <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserAuthInfo">获取头像</button>
+
+  </view>
+
+
+  <view class="my-option">
+
+    <view class="option-address" bindtap="goAddress">
+      <view class="fl address-title">我的地址</view>
+      <view class="fr option-icon">
+        <image class="auto-img icon-img" mode="widthFix" src="../../images/to-right.png"></image>
+      </view>
+    </view>
+
+  </view>
+</view>

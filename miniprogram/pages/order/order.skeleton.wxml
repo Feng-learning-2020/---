@@ -1,0 +1,81 @@
+<!--
+此文件为开发者工具生成，生成时间: 2020/12/16 下午3:10:18 
+使用方法：
+在 E:\前端\微信小程序\tel\miniprogram\pages\order\order.wxml 引入模板
+
+```
+<import src="order.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 E:\前端\微信小程序\tel\miniprogram\pages\order\order.wxss 中引入样式
+```
+@import "./order.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="order">
+      <view class="order-item">
+        <view class="pay-information-box" style="border: none;">
+          <view class="information-title" style="border: none;">
+            <view class="fl information-num sk-transparent sk-text-33-3333-453 sk-text">NO3423425252</view>
+            <view class="fr information-btn sk-transparent sk-text-31-9444-329 sk-text">确认收货</view>
+          </view>
+          <view class="address-information sk-transparent sk-text-14-2857-57 sk-text">收货地址:xxxxxxxxxxxxxx</view>
+          <view class="pay-information">
+            <view class="fl information-img-box">
+              <image class="information-img sk-image"></image>
+            </view>
+            <view class="fl information-content">
+              <view class="information-name sk-transparent sk-text-14-2857-471 sk-text"> item.product.name </view>
+              <view class="information-rule sk-transparent sk-text-14-2857-709 sk-text"> item.rule </view>
+              <view class="information-pri-num">
+                <view class="fl information-pri sk-transparent sk-text-11-9048-222 sk-text">￥ item.product.price </view>
+                <view class="fr information-num sk-transparent sk-text-21-4286-528 sk-text">x item.count </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="count-total-box sk-pseudo sk-pseudo-circle">
+          <view class="time sk-transparent sk-text-14-2857-871 sk-text">2020-12-12 15:01:24</view>
+          <view class="count-total">
+            <view class="fl count-box sk-transparent sk-text-26-7857-753 sk-text">共计 count 件商品</view>
+            <view class="fr total-box sk-transparent sk-text-26-7857-608 sk-text">合计 ￥ total </view>
+          </view>
+        </view>
+      </view>
+      <view class="order-item">
+        <view class="pay-information-box" style="border: none;">
+          <view class="information-title" style="border: none;">
+            <view class="fl information-num sk-transparent sk-text-33-3333-7 sk-text">NO3423425252</view>
+            <view class="fr information-btn sk-transparent sk-text-31-9444-943 sk-text">确认收货</view>
+          </view>
+          <view class="address-information sk-transparent sk-text-14-2857-718 sk-text">收货地址:xxxxxxxxxxxxxx</view>
+          <view class="pay-information">
+            <view class="fl information-img-box">
+              <image class="information-img sk-image"></image>
+            </view>
+            <view class="fl information-content">
+              <view class="information-name sk-transparent sk-text-14-2857-517 sk-text"> item.product.name </view>
+              <view class="information-rule sk-transparent sk-text-14-2857-824 sk-text"> item.rule </view>
+              <view class="information-pri-num">
+                <view class="fl information-pri sk-transparent sk-text-11-9048-434 sk-text">￥ item.product.price </view>
+                <view class="fr information-num sk-transparent sk-text-21-4286-792 sk-text">x item.count </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="count-total-box sk-pseudo sk-pseudo-circle">
+          <view class="time sk-transparent sk-text-14-2857-283 sk-text">2020-12-12 15:01:24</view>
+          <view class="count-total">
+            <view class="fl count-box sk-transparent sk-text-26-7857-42 sk-text">共计 count 件商品</view>
+            <view class="fr total-box sk-transparent sk-text-26-7857-758 sk-text">合计 ￥ total </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

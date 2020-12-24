@@ -1,0 +1,87 @@
+<!--
+此文件为开发者工具生成，生成时间: 2020/12/3 下午8:24:40 
+使用方法：
+在 E:\粤嵌\微信小程序\tel\miniprogram\pages\pay\pay.wxml 引入模板
+
+```
+<import src="pay.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 E:\粤嵌\微信小程序\tel\miniprogram\pages\pay\pay.wxss 中引入样式
+```
+@import "./pay.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="pay">
+      <view class="pay-address">
+        <view class="clearfix choosed-address-title sk-pseudo sk-pseudo-circle">
+          <view class="fl sk-transparent sk-text-30-0000-679 sk-text">选择收货地址</view>
+          <view class="fl title-icon">
+            <image class="auto-img sk-image" mode="widthFix" style="height: 14px;"></image>
+          </view>
+        </view>
+        <view class="choosed-address">
+          <view class="clearfix pay-name-tel sk-pseudo sk-pseudo-circle">
+            <view class="fl pay-name sk-transparent sk-text-30-0000-962 sk-text">刘知兵</view>
+            <view class="fl pay-tel sk-transparent sk-text-32-5000-319 sk-text">13266669999</view>
+          </view>
+          <view class="address-content sk-transparent sk-text-22-0000-947 sk-text">广东省广州市天河区吉山新路街</view>
+        </view>
+      </view>
+      <view class="pay-information-box" style="border: none;">
+        <view class="information-title sk-transparent sk-text-28-3333-499 sk-text" style="border: none;">订单详情</view>
+        <view class="pay-information">
+          <view class="fl information-img-box">
+            <image class="information-img sk-image"></image>
+          </view>
+          <view class="fl information-content">
+            <view class="information-name sk-transparent sk-text-14-2857-763 sk-text">艇仔粥</view>
+            <view class="information-rule sk-transparent sk-text-14-2857-19 sk-text">不辣/大份</view>
+            <view class="information-pri-num">
+              <view class="fl information-pri sk-transparent sk-text-11-9048-600 sk-text">￥15</view>
+              <view class="fr information-num sk-transparent sk-opacity">x2</view>
+            </view>
+          </view>
+        </view>
+        <view class="pay-information">
+          <view class="fl information-img-box">
+            <image class="information-img sk-image"></image>
+          </view>
+          <view class="fl information-content">
+            <view class="information-name sk-transparent sk-text-14-2857-111 sk-text">艇仔粥</view>
+            <view class="information-rule sk-transparent sk-text-14-2857-539 sk-text">不辣/大份</view>
+            <view class="information-pri-num">
+              <view class="fl information-pri sk-transparent sk-text-11-9048-343 sk-text">￥15</view>
+              <view class="fr information-num sk-transparent sk-opacity">x2</view>
+            </view>
+          </view>
+        </view>
+        <view class="pay-information">
+          <view class="fl information-img-box">
+            <image class="information-img sk-image"></image>
+          </view>
+          <view class="fl information-content">
+            <view class="information-name sk-transparent sk-text-14-2857-544 sk-text">艇仔粥</view>
+            <view class="information-rule sk-transparent sk-text-14-2857-935 sk-text">不辣/大份</view>
+            <view class="information-pri-num">
+              <view class="fl information-pri sk-transparent sk-text-11-9048-855 sk-text">￥15</view>
+              <view class="fr information-num sk-transparent sk-opacity">x2</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="count-total-box sk-pseudo sk-pseudo-circle">
+        <view class="fl count-box sk-transparent sk-text-36-4583-46 sk-text">共计3件商品</view>
+        <view class="fr total-box sk-transparent sk-text-36-4583-980 sk-text">合计 ￥56</view>
+      </view>
+      <view class="submit-btn-box">
+        <view class="submit-btn sk-transparent sk-text-33-3333-361 sk-text" style="background-position-x: 50%;">立即结算</view>
+      </view>
+    </view>
+  </view>
+</template>

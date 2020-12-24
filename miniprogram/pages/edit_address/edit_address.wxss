@@ -1,0 +1,92 @@
+@import "./edit_address.skeleton.wxss";
+.edit-address{
+  background-color: #f2f2f2;
+}
+.edit-content-box{
+  margin: 30rpx 24rpx 24rpx 24rpx;
+  background-color: #fff;
+  border-radius: 16rpx;
+  overflow: hidden;
+}
+.edit-content{
+  padding: 20rpx 24rpx;
+  overflow: hidden;
+}
+.item-title{
+  width: 140rpx;
+  height: 52rpx;
+  color: #333;
+  font-size: 28rpx;
+  line-height: 52rpx;
+}
+.item-value{
+  float: left;
+  width: calc(100% - 140rpx);
+  height: 52rpx;
+  font-size: 28rpx;
+  position: relative;
+  line-height: 52rpx;
+}
+.ipt-text{
+  color: #666;
+  height: 52rpx;
+  background-color: transparent;
+  line-height: 52rpx;
+}
+.picker-box{
+  height: 52rpx;
+  font-size: 28rpx;
+  line-height: 52rpx;
+  color: #666;
+  position: relative;
+}
+.pick-icon{
+  position: absolute;
+  width: 28rpx;
+  height: 28rpx;
+  right: 8rpx;
+  top: 12rpx;
+}
+.auto-img{
+  height: 28rpx;
+}
+
+.edit-default{
+  margin: 24rpx;
+  margin-top: 40rpx;
+  padding: 20rpx 24rpx;
+  color: #333;
+  font-size: 28rpx;
+  background-color: #fff;
+  border-radius: 16rpx;
+  overflow: hidden;
+}
+.default-title{
+  height: 52rpx;
+  line-height: 52rpx;
+}
+.switch-box{
+  height: 52rpx;
+}
+.save-btn{
+  height: 76rpx;
+  margin: 60rpx 24rpx;
+  color: #fff;
+  font-size: 28rpx;
+  background-color: #ff0033;
+  text-align: center;
+  line-height: 76rpx;
+  border-radius: 38rpx;
+  letter-spacing: 2rpx;
+}
+.delete-btn{
+  height: 76rpx;
+  margin: 60rpx 24rpx;
+  color: #fff;
+  font-size: 28rpx;
+  background-color: #999;
+  text-align: center;
+  line-height: 76rpx;
+  border-radius: 38rpx;
+  letter-spacing: 2rpx;
+}

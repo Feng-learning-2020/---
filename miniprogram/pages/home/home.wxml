@@ -1,0 +1,83 @@
+<import src="home.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+
+<view class="home" wx:else>
+  <!-- 餐馆背景 -->
+  <view class="home-bg-box">
+    <image class="home-bg" mode="widthFix" src="cloud://tel-6ga2ueoo4c00d1d3.7465-tel-6ga2ueoo4c00d1d3-1304340962/imgs/bg.png"></image>
+  </view>
+
+  <!-- 餐馆名-餐馆logo -->
+  <view class="name-logo-box">
+    <view class="fl name-box">十亩之间
+      <view class="name-des">本餐馆名灵感取于中国古代第一部诗歌总集《诗经》中的《魏风·十亩之间》,《魏风·十亩之间》是描写采桑人轻松愉快的劳动场景的诗,勾画出一派清新恬淡的田园风光和劳动场景,抒写了采桑女轻松愉快的劳动心情,希望我们也可以给您带来这份喜悦</view>
+    </view>
+    <view class="fr logo-box">
+      <image class="logo auto-img" mode="widthFix" src="cloud://tel-6ga2ueoo4c00d1d3.7465-tel-6ga2ueoo4c00d1d3-1304340962/imgs/logo.png"></image>
+    </view>
+  </view>
+
+  <!-- 菜品 -->
+  <view class="food-classify">
+
+    <!-- 菜单分类列表 -->
+    <view class="fl type-list">
+      <view class="list-item {{activeIndex==index ? 'active' : ''}}" wx:for="{{classifyList}}" wx:key='index' bindtap="toggleMenuList" data-index="{{index}}" data-type="{{item.type}}" >{{item.title}}</view>
+    </view>
+
+    <!-- 分类商品 -->
+    <view class="fl menu-content">
+      <product wx:for="{{products}}" wx:key="index" product-data="{{item}}" data-index="{{index}}" bindcurrentIndexEvent="changeCurrentIndex" bindaddShopcart="modifyShopcartCount"></product>
+    </view>
+  </view>
+
+
+  <!-- 购物车 -->
+  <view class="shop-cart-box {{shopCartCount > 0 ? 'active' : ''}}" data-hidden="0" bindtap="toggleShopcart">
+    <view class="shop-cart-img">
+      <image mode="widthFix" src="{{shopCartCount > 0 ? '../../images/gouwuche-active.png' : '../../images/gouwuche.png'}}"></image>
+      <view class="pro-count {{isAdd ? 'animate' : ''}}" wx:if="{{shopCartCount>0}}">{{shopCartCount}}</view>
+    </view>  
+  </view>
+
+  <!-- 购物车详情 -->
+  <!-- 透明层 -->
+  <view class="shopcart-detail-box" hidden="{{isHidden}}"  data-hidden="1" bindtap="toggleShopcart">
+
+    <view class="shopcart-detail" catchtap="toggleShopcart" data-rule="1">
+      <!-- 标题 -->
+      <view class="shopcart-title">
+        <view class="edit" catchtap="editShopcart" style="display: {{shopcartData.length>0 ? 'block' : 'none'}}">{{isEdit? '完成':'编辑'}}</view>
+        <view>购物车</view>
+        <view class="shopcart-exit">
+          <image class="auto-img" mode="widthFix" src="../../images/close.png" catchtap="toggleShopcart" data-hidden="1"></image>
+        </view>
+      </view>
+      <!-- 加入购物车的商品 -->
+      <view wx:if="{{shopcartData.length == 0}}" class="nothing">购物车空空如也</view>
+      <view class="shopcart-pros" wx:else>
+        <view class="shopcart-pro clear-float" wx:for="{{shopcartData}}" wx:key="index" style="margin-left: {{isEdit? '0':'-58rpx'}}">
+          <!-- 编辑-选择 -->
+          <view class="fl shopcart-delete" data-index="{{index}}" catchtap="seleteShopcartProduct">
+            <view style="display: {{item.isSelete? 'block':'none'}}"></view>
+          </view>
+          <!-- 图片 -->
+          <view class="fl shopcart-img-box">
+            <image wx:if='{{item.product.img}}' class="auto-img shopcart-img" mode="widthFix" src="{{item.product.img}}"></image>
+          </view>
+          <view class="fl shopcart-content" style="width: {{isEdit? '244rpx':'300rpx'}}">
+            <view class="content-name">{{item.product.name}}</view>
+            <view class="content-rule">{{item.rule}}</view>
+            <view class="content-pri-num clear-float">
+              <view class="fl content-pri">￥{{item.product.price}}</view>
+              <view class="fr content-num">x{{item.count}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="submit-btn" wx:if="{{shopcartData.length == 0}}" catchtap="toggleShopcart" data-hidden="1">去逛逛</view>
+      <view class="submit-btn" catchtap="{{isEdit? 'deleteShopcartProduct':'toPay'}}" wx:else>{{isEdit? '删除':'去结算'}}</view>
+    </view>
+  </view>
+
+</view>

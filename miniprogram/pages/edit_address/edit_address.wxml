@@ -1,0 +1,51 @@
+<import src="edit_address.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+<view class="edit-address" wx:else>
+
+  <view class="edit-content-box">
+
+    <view class="edit-content">
+      <view class="fl item-title">姓名</view>
+      <view class="fl item-value">
+        <input class="ipt-text" placeholder="收货人姓名" placeholder-style="color: #ccc" value="{{addressInfo.receiver}}" bindchange="changeInput" data-key="receiver" />
+      </view>
+    </view>
+    
+    <view class="edit-content">
+      <view class="fl item-title">手机号</view>
+      <view class="fl item-value">
+        <input class="ipt-text" placeholder="收货人手机号" placeholder-style="color: #ccc" value="{{addressInfo.tel}}" bindchange="changeInput" data-key="tel" />
+      </view>
+    </view>
+        
+    <view class="edit-content">
+      <view class="fl item-title">地区</view>
+      <view class="fl item-value">
+        <picker class="picker-box" mode="region" bindchange="changeInput" data-key="area">{{addressInfo.area}}</picker>
+        <view class="pick-icon">
+          <image class="auto-img" src="../../images/to-right.png"></image>
+        </view>
+      </view>
+    </view>
+     
+    <view class="edit-content">
+      <view class="fl item-title">详细地址</view>
+      <view class="fl item-value">
+        <input class="ipt-text" placeholder="收货人详细地址" placeholder-style="color: #ccc" value="{{addressInfo.detail}}" bindchange="changeInput" data-key="detail" />
+      </view>
+    </view>
+
+  </view>
+
+  <view class="edit-default">
+    <view class="fl default-title">设为默认收货地址</view>
+    <view class="fr switch-box">
+      <switch color="#ff0033" style="zoom: .8" checked="{{addressInfo.isDefault}}" bindchange="changeInput" data-key="isDefault" />
+    </view>
+  </view>
+
+  <view class="delete-btn" style="display: {{_id ? 'block' : 'none'}}" bindtap="deleteAddress" >删除</view>
+
+  <view class="save-btn" bindtap="{{_id ? 'saveEditAddress' : 'addAddress'}}">保存</view>
+
+</view>

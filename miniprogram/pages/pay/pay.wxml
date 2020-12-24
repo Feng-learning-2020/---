@@ -1,0 +1,59 @@
+<import src="pay.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+
+<view class="pay" wx:else>
+  <!-- 选择收货地址 -->
+  <view class="pay-address">
+
+    <view class="clearfix choosed-address-title" bindtap="selectAddress" data-selete='1'>
+      <view class="fl">选择收货地址</view>
+      <view class="fl title-icon">
+        <image class="auto-img" mode="widthFix" src="../../images/to-right.png"></image>
+      </view>
+    </view>
+
+    <view class="choosed-address">
+      <view class="clearfix pay-name-tel">
+        <view class="fl pay-name">{{addressInfo.receiver}}</view>
+        <view class="fl pay-tel">{{addressInfo.tel}}</view>
+      </view>
+      <view class="address-content">{{addressInfo.area}}{{addressInfo.detail}}</view>
+    </view>
+
+  </view>
+
+  <!-- 订单信息 -->
+  <view class="pay-information-box">
+
+    <!-- 标题 -->
+    <view class="information-title">订单详情</view>
+    <!-- 单个商品信息 -->
+    <view class="pay-information" wx:for="{{productData}}" wx:key="index">
+      <!-- 商品图片 -->
+      <view class="fl information-img-box">
+        <image class="information-img" src="{{item.product.img}}"></image>
+      </view>
+      <!-- 商品规格信息 -->
+      <view class="fl information-content">
+        <view class="information-name">{{item.product.name}}</view>
+        <view class="information-rule">{{item.rule}}</view>
+        <view class="information-pri-num">
+          <view class="fl information-pri">￥{{item.product.price}}</view>
+          <view class="fr information-num">x{{item.count}}</view>
+        </view>
+      </view>
+    </view> 
+
+  </view>
+
+  <!-- 订单底部总价格 -->
+  <view class="count-total-box">
+    <view class="fl count-box">共计{{count}}件商品</view>
+    <view class="fr total-box">合计 ￥{{total}}</view>
+  </view>
+
+  <!-- 结算按钮 -->
+  <view class="submit-btn-box">
+    <view class="submit-btn" bindtap="settleOrder">立即结算</view>
+  </view>
+</view>
